@@ -2891,7 +2891,8 @@ footer .widget h4 {
    }
  }
 
- .floatImage:hover {
-   transition: all 1.5s ease-in-out;
-   transform: rotateY(360deg);
- }
+
+ .floatImage:hover, .floatImage:focus {
+    transition: all 1.5s ease-in-out;
+    transform: rotateY(360deg);
+}
