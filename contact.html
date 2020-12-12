@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>One Piece</title>
@@ -8,6 +10,15 @@
     <link href="static/css/bootstrap-responsive.min.css" rel="stylesheet">
     <link rel="stylesheet" href="static/css/main.css" type="text/css">
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2DYFRX5ZVQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-2DYFRX5ZVQ');
+    </script>
 </head>
 
 <body class="body-container preload">
@@ -24,19 +35,19 @@
                     <ul>
                         <li class="toggle"><a href="#">Menu</a></li>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="single.html">Single</a></li>
-                        <li><a class="pitch-on" href="contact.html">Contact</a></li>
+                        <li><a href="portfolio.html">Gallery</a></li>
+                        <li><a href="single.html">the "Chopper"</a></li>
+                        <li><a class="pitch-on" href="contact.html">My OP Story</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="m-slider info-content">
                 <div class="slide margin-top-20">
-                    <h2>One Piece</h2>
+                    <h2>One Piece and Me</h2>
                     <p>
-                        A hot-blooded story about a voyage of adventure
+                        Where the adventure began...
                     </p>
-                    <a href="portfolio.html" class="button">view details</a>
+                    <a href="#content-anchor" class="button">Learn about the story</a>
                 </div>
             </div>
         </div>
@@ -46,15 +57,16 @@
 <section class="page">
     <div class="container">
         <div class="my-photo-wall">
-            <div class="info-content"><img src="static/picture/head.jpg" alt="my"/></div>
-            <div class="info-content"><img src="static/picture/01.png" alt="my"/></div>
-            <div class="info-content"><img src="static/picture/head.jpg" alt="my"/></div>
+            <div class="info-content"><img src="static/picture/head1.jpg" alt="my favorite chopper"/></div>
+            <div class="info-content"><img src="static/picture/01.png" alt="op gallery"/></div>
+            <div class="info-content"><img src="static/picture/head.jpg" alt="my pic"/></div>
         </div>
+        <a name="content-anchor"></a>
         <div class="row margin-top-20">
             <div class="post-content fixed-content span8">
-                <div class="content">
+                <div class="content" tabindex="1">
                     <h4>About this site</h4>
-                    <p class="light-font">I made this site to introduce One Piece, a renowned Japanese cartoon. The site includes 4 parts : intro to One Piece, the character "Chopper" info, gallery and manuscript. I hope to share this work to more people.</p>
+                    <p class="light-font">I made this site to introduce One Piece, a renowned Japanese cartoon. The site includes 4 parts : intro to One Piece, the character "Chopper" info, gallery and manuscript. I hope to share this work to more people. If you are also interested, fill in the contact form right there, and let's connect! </p>
                     <h4>How One Piece has changed my life</h4>
                     <p class="light-font">About two years ago now, I was in one of my downturn periods when I was looking for a distraction. I had heard my cousin talk about One Piece, mainly its length and great world building so I decided I'd read the manga. My goodness, I am glad I did. I read the manga in less than a year, and it has provided a great distraction for me during bad times and an amazing adventure to marvel over during my good times. And now when I think to myself that there's nothing good left, I read through some of the epic moments and remember that I still have to see Luffy turn the world upside down by becoming King of Pirates. And sometimes remembering that I still have to see that gives me the push I need.</p>
                     <div class="item-meta">
@@ -70,7 +82,7 @@
                 </div>
             </div>
             <div class="span4">
-                <form class="comments-form contact-form">
+                <form class="comments-form contact-form" action="https://formspree.io/wziwei@umich.edu" method="post" id="my-post-form">
                     <div class="form-group">
                         <label for="name">Name*</label>
                         <input type="text" name="name" placeholder="Name*" id="name" class="form-control name">
@@ -93,7 +105,7 @@
 <footer>
     <div class="copyrights">
         <div class="container">
-            <div class="copyright-info">Search &copy; Ziwei(Ivy)Wang -2020</div>
+            <div class="copyright-info">Search &copy; Ziwei (Ivy) Wang - 2020</div>
         </div>
     </div>
 </footer>
@@ -102,15 +114,16 @@
     function submitted_info() {
         let name = document.getElementById("name").value;
         if (name.length <= 0) {
-            alert("The name cannot be empty");
+            alert("Why not tell me your name?");
             return;
         }
         let email = document.getElementById("email").value;
         if (email.length <= 0) {
-            alert("The email cannot be empty");
+            alert("Let me your email and we could connect:)");
             return;
         }
-        alert("Submitted");
+        alert("Submitted! Here we go!");
+        document.getElementById("my-post-form").submit();
     }
 </script>
 
